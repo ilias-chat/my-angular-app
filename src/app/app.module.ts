@@ -9,6 +9,7 @@ import { ResipeItemComponent } from './recipes/recipe-list/resipe-item/resipe-it
 import { headerComponent } from './header/header.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListFormComponent } from './shopping-list/shopping-list-form/shopping-list-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ShoppingListFormComponent } from './shopping-list/shopping-list-form/sh
     ShoppingListFormComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
