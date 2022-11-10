@@ -10,6 +10,7 @@ import { headerComponent } from './header/header.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListFormComponent } from './shopping-list/shopping-list-form/shopping-list-form.component';
 import { FormsModule } from '@angular/forms';
+import { DropdownDirective } from './shared/dropdown.directive'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     ResipeItemComponent,
     ShoppingListComponent,
     ShoppingListFormComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

@@ -10,15 +10,12 @@ export class ShoppingListFormComponent implements OnInit {
 
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
-  name:string = '55';
-  amount:number | any;
-
   constructor() { }
 
   ngOnInit(): void {}
 
-  onAddIngredient(){
-    this.ingredientAdded.emit(new Ingredient(this.name, this.amount))
+  onAddIngredient(name:string, amount:string){
+    this.ingredientAdded.emit(new Ingredient(name, Number(amount)));
   }
 
 }

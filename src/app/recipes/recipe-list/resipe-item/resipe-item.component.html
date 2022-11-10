@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-body">
         <div class="content">
-            <h4>{{ recipe.name }}</h4>
+            <h4><a (click)="onRecipeClick()" href="#">{{ recipe.name }}</a></h4>
             <p>{{ recipe.description }}</p>
         </div>
         <span>

@@ -1,5 +1,8 @@
-<h4 style="margin-top: 16px;">Recipe list</h4>
+<h4>Recipe list</h4>
 
-<app-resipe-item *ngFor="let recipe of recipes" [recipe] = recipe></app-resipe-item>
+<app-resipe-item 
+*ngFor="let recipe of recipes; let i = index" 
+(onRcipeClicked)="onRecipeItemClicked(i)"
+[recipe] = recipe></app-resipe-item>
 <hr>
 <button class="btn btn-primary">New recipe</button>
