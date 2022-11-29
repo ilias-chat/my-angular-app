@@ -6,21 +6,22 @@
                 Manage recipe <span class="caret"></span>
             </button>
             <div class="dropdown-menu">
-                <a href="#" class="dropdown-item">to shopping list</a>
+                <a href="#" class="dropdown-item" (click)="onAddToShoppingList()">to shopping list</a>
                 <a href="#" class="dropdown-item">edit recipe</a>
                 <a href="#" class="dropdown-item">delete recipe</a>
             </div>
         </div>
         <p>{{ recipe.description }}</p>
+        <ul class="list-group">
+            <li class="list-group-item"
+            *ngFor="let ing of recipe.ingredients">
+                {{ ing.name }} ({{ ing.amount }})
+            </li>
+        </ul>
     </div>
     <div class="col-md-6" style="overflow: hidden;">
         <img src="{{ recipe.imagePath }}" alt="recipe image" 
         class="img-responsive" style="height: 500px;">
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            Ingredients
-        </div>
     </div>
 </div>
 <ng-template #infoText>
